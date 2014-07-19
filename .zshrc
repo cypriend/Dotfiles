@@ -9,13 +9,34 @@ ZSH_THEME="agnoster"
 DEFAULT_USER='cyprienWork'
 source $ZSH/oh-my-zsh.sh
 
+# Completion
+autoload -U compinit
+compinit
+
+# makes color constants available
+autoload -U colors
+colors
+
+# enable colored output from ls, etc
+export CLICOLOR=1
+
+#Editor
+# export EDITOR=$VISUAL
+export VISUAL=Sublime Text
+
+
+
+# history settings
+setopt hist_ignore_all_dups inc_append_history
+HISTFILE=~/.zhistory
+HISTSIZE=4096
+SAVEHIST=4096
 
 # Misc aliases
-alias ls='ls -alhF'
+alias ls='ls -AlhF'
 alias yoopies='cd /Users/cyprienWork/Sites/YoopiesDev/'
 alias github='cd /Users/cyprienWork/Github/'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-
 
 
 # ZSH aliases
