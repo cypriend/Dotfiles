@@ -24,8 +24,6 @@ export CLICOLOR=1
 # export EDITOR=$VISUAL
 export VISUAL=Sublime Text
 
-
-
 # history settings
 setopt hist_ignore_all_dups inc_append_history
 HISTFILE=~/.zhistory
