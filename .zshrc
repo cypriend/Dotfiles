@@ -15,16 +15,15 @@ compinit
 
 # makes color constants available
 autoload -U colors
-colors
 
 # enable colored output from ls, etc
 export CLICOLOR=1
 
-#Editor
+# Editor
 # export EDITOR=$VISUAL
 export VISUAL=Sublime Text
 
-# history settings
+# History settings
 setopt hist_ignore_all_dups inc_append_history
 HISTFILE=~/.zhistory
 HISTSIZE=4096
@@ -32,8 +31,7 @@ SAVEHIST=4096
 
 # Misc aliases
 alias ls='ls -AlhF'
-alias yoopies='cd /Users/cyprienWork/Sites/YoopiesDev/'
-alias github='cd /Users/cyprienWork/Github/'
+alias github='cd /Users/cyprienwork/Github/'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 
@@ -51,9 +49,17 @@ alias fixtures='php app/console doctrine:fixtures:load --append'
 alias cc='sudo rm -rf app/cache/*'
 
 # GIT aliases
-# alias fix='git commit -am "fix"'
+# alias fix = "git commit -am "fix""
 alias gpp='git pull && git push'
-alias wathchanged='git diff --stat HEAD^ HEAD'
+alias gds='diff --staged'
+alias gst='git status -sb'
+alias gundo='git reset --soft HEAD^'
+alias whatchanged='git diff --stat HEAD^ HEAD'
+alias create-branch='!sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -'
+alias delete-branch='!sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -'
+alias merge-branch='!git checkout master && git merge @{-1}'
+
+
 
 # alias preprod="manager 'cd deploy_preprod && git pull && /var/lib/gems/1.8/bin/cap preprod deploy'"
 # alias prodAPI="manager 'cd deploy_prod && git pull && /var/lib/gems/1.8/bin/cap api deploy'"
