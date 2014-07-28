@@ -51,7 +51,7 @@ alias cc='sudo rm -rf app/cache/*'
 # GIT aliases
 # alias fix = "git commit -am "fix""
 alias gpp='git pull && git push'
-alias gds='diff --staged'
+# alias gds='diff --staged'
 alias gst='git status -sb'
 alias gundo='git reset --soft HEAD^'
 alias whatchanged='git diff --stat HEAD^ HEAD'
