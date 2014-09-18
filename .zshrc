@@ -21,7 +21,7 @@ export CLICOLOR=1
 
 # Editor
 # export EDITOR=$VISUAL
-export VISUAL=Sublime Text
+export VISUAL='/Applications/Sublime\ Text.app'
 
 # History settings
 setopt hist_ignore_all_dups inc_append_history
